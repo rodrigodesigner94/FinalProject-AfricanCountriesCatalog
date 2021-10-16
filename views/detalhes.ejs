@@ -21,37 +21,23 @@
     <header>
         <h1>Paises Africanos</h1>
     </header>
-    <section id="detalhes">     
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Flag_of_Mozambique.svg/100px-Flag_of_Mozambique.svg.png" alt="">
-        <div id="infos">
-       
-            <p>
-                Angola é um país no sul da África, com um território que abrange praias tropicais do Atlântico, além de um sistema labiríntico de rios e desertos subsaarianos que se estende até a Namíbia. A história colonial do país se reflete em sua cozinha de influência portuguesa e em marcos históricos, como a Fortaleza de São Miguel, construída pelos portugueses em 1576 para defender a capital, Luanda. 
-            </p>
-<!--            
-            <div id="info-datalhes"> -->
-                <!-- <div class='col'> -->
-                    <h4>Capital</h4>
-                    <h3>
-                        Maputo
-                    </h3>
-                    <h4>Moeda</h4>
-                    <h3>
-                        Meticais
-                    </h3>
-                <!-- </div> -->
-                <!-- <div class='col'> -->
-                    <h4>População</h4>
-                    <h3>
-                        10 339 002
-                    </h3>
-                    <h4>Lingua Oficial</h4>
-                    <h3>
-                        Português
-                    </h3>
-        
-        </div>
-    </section>
     
+    <section id="pais">
+        <h3>Lista de filmes:</h3>
+            <section class="card">
+                <article id="content">
+                        <ul>
+                            <li>Nome: <%= filme.nome %></li>
+                            <li>Descrição: <%= filme.descricao %></li>
+                            <a href="/">
+                                <img src="<%= filme.imagem %>" width=200>
+                            </a>
+                            <a href="/deletar/<%= filme.id %>">DELETAR!</a>
+                        </ul>
+                </article>
+            </section>
+    </section>
+
+    <script src="/js/script.js"></script>
 </body>
 </html>

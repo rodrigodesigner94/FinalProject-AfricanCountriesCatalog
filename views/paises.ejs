@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/stylepaises.css">
 
-    <title>África Desmistificada</title>
+    <title>Países</title>
 </head>
 
 <body>
@@ -21,102 +21,33 @@
     <header>
         <h1>Todos Paises Africanos</h1>
     </header>
-    <section id="paises">     
-        <a class="card" href="/detalhes">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Flag_of_Angola.svg/100px-Flag_of_Angola.svg.png" alt="">
-            <h2>
-                Angola
-            </h2>
-     
-        </a>
-        <a class="card" href="/detalhes">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Flag_of_Mozambique.svg/100px-Flag_of_Mozambique.svg.png" alt="">
-            <h2>
-                Moçambique
-            </h2>
-            
-        </a>
-        <a class="card" href="/detalhes">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Flag_of_Mozambique.svg/100px-Flag_of_Mozambique.svg.png" alt="">
-            <h2>
-                Moçambique
-            </h2>
-          
-        </a>
-        <a class="card" href="/detalhes">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Flag_of_Mozambique.svg/100px-Flag_of_Mozambique.svg.png" alt="">
-            <h2>
-                Moçambique
-            </h2>
-          
-        </a>
-        <a class="card" href="/detalhes">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Flag_of_Mozambique.svg/100px-Flag_of_Mozambique.svg.png" alt="">
-            <h2>
-                Moçambique
-            </h2>
-         
-        </a>
-        <a class="card" href="/detalhes">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Flag_of_Mozambique.svg/100px-Flag_of_Mozambique.svg.png" alt="">
-            <h2>
-                Moçambique
-            </h2>
-        
-        </a>
-        <a class="card" href="/detalhes">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Flag_of_Mozambique.svg/100px-Flag_of_Mozambique.svg.png" alt="">
-            <h2>
-                Moçambique
-            </h2>
-        </a>
-        <a class="card" href="/detalhes">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Flag_of_Mozambique.svg/100px-Flag_of_Mozambique.svg.png" alt="">
-            <h2>
-                Moçambique
-            </h2>
-        </a>
-        <a class="card" href="/detalhes">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Flag_of_Mozambique.svg/100px-Flag_of_Mozambique.svg.png" alt="">
-            <h2>
-                Moçambique
-            </h2>
-          
-        </a>
-        <a class="card" href="/detalhes">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Flag_of_Mozambique.svg/100px-Flag_of_Mozambique.svg.png" alt="">
-            <h2>
-                Moçambique
-            </h2>
-          
-        </a>
-        <a class="card" href="/detalhes">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Flag_of_Mozambique.svg/100px-Flag_of_Mozambique.svg.png" alt="">
-            <h2>
-                Moçambique
-            </h2>
-         
-        </a>
-        <a class="card" href="/detalhes">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Flag_of_Mozambique.svg/100px-Flag_of_Mozambique.svg.png" alt="">
-            <h2>
-                Moçambique
-            </h2>
-        
-        </a>
-        <a class="card" href="/detalhes">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Flag_of_Mozambique.svg/100px-Flag_of_Mozambique.svg.png" alt="">
-            <h2>
-                Moçambique
-            </h2>
-        </a>
-        <a class="card" href="/detalhes">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Flag_of_Mozambique.svg/100px-Flag_of_Mozambique.svg.png" alt="">
-            <h2>
-                Moçambique
-            </h2>
-        </a>
+    <!-- lista de paises -->
+    <section id="paises">
+        <% filmes.forEach(item => { %>
+            <section class="card">
+                <article id="content">
+                    <ul>
+                        <a href="/detalhes/<%= item.id %>">
+                            <img src="<%= item.bandeira %>" width=200>
+                        </a>
+                        <li>Nome: <%= item.nome %></li>
+                        <li>Capital: <%= item.capital %></li>
+                        <li>Região: <%= item.regiao %></li>
+                        <li>Extensão: <%= item.extensao %></li>
+                        <li>População: <%= item.populacao %></li>
+                        <li>Lingua Oficial: <%= item.lingua %></li>
+                        <li>Moeda Oficial: <%= item.moeda %></li>
+                        <li>Informações: <%= item.informacoes %></li>
+                                                
+                    </ul>
+                        <a href = "/editar/<%= item.id %>">Editar</a>
+                        <a href = "/deletar/<%= item.id %>">Deletar</a>
+
+                </article>
+            </section>
+        <% }) %> 
     </section>
+    <script src="/js/script.js"></script>  
     
 </body>
 </html>

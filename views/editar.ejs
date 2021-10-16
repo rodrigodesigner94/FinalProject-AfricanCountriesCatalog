@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/stylepaises.css">
+    <title>Editar País</title>
+</head>
+<body>
+    <header>
+        <h1>Aqui você pode editar um pais da lista</h1>
+
+    <% if(message != "") {  %>
+        <section id="message">
+            <p><%= message %></p> <span id="close">&times;</span>
+        </section>
+    <% }  %>
+    
+    <% if(filme != null) {  %>
+    <section id="inscrever">
+        <form action="/editar/<%= filme.id %>" method="POST">
+            <section id="pais">
+                <div>
+                        <label for="bandeira">Coloque o link para a imagem da bandeira: </label>
+                        <input type="text" name="bandeira" id="bandeira" placeholder="Link da imagem" value="<%= filme.bandeira %>">
+                    </div>
+                
+                    <div>
+                        <label for="nome">Digite o nome do país: </label>
+                        <input type="text" name="nome" id="nome" placeholder="Nome do pais" value="<%= pais.nome %>">
+                    </div>
+                    <div>
+                        <label for="capital">Digite a capital do país: </label>                
+                        <input type="text" name="capital" id="capital" placeholder="Digite a capital" value="<%= pais.capital %>">
+                    </div>
+                    <div>
+                        <label for="região">Digite a região do país: </label>                
+                        <input type="text" name="regiao" id="regiao" placeholder="Digite a região" value="<%= pais.regiao %>">
+                    </div> 
+                    <div>
+                        <label for="extensao">Informe a extensão do país: </label>                
+                        <input type="number" name="extensao" id="extensao" placeholder="Informe a extensão" value="<%= pais.extensao %>">
+                    </div> 
+                    <div>
+                        <label for="populacao">Informe a capital do população: </label>                
+                        <input type="number" name="populacao" id="populacao" placeholder="Digite a populacao" value="<%= pais.populacao %>">
+                    </div>
+                    <div>
+                        <label for="lingua">Informe a lingua oficial do país: </label>                
+                        <input type="text" name="lingua" id="lingua" placeholder="Digite a lingua oficial" value="<%= pais.lingua %>">
+                    </div>
+                    <div>
+                        <label for="moeda">Informe a moeda oficial do país: </label>                
+                        <input type="text" name="moeda" id="moeda" placeholder="Digite a moeda oficial" value="<%= pais.moeda %>">
+                    </div>                             
+                    <div>
+                        <label for="informacoes">Digite as informações do país: </label>
+                        <input type="text" name="informacoes" id="informacoes" placeholder="Adicione as informações extra sobre o país" value="<%= filme.informacoes %>">
+                    </div>
+                    <button type="submit">Editar</button>
+        </form>
+    </section>
+    <% }  %>
+
+    <script src="/js/script.js"></script>
+</body>
+</html>
