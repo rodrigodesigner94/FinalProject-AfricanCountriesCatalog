@@ -1,0 +1,27 @@
+{
+  "name": "finalproject-africancountriescatalog",
+  "version": "1.0.0",
+  "description": "Projeto final - Catalogo de Países africanos para modulo 2 HTML | CSS | EXPRESS | PostgreSQL da Blue Edtech",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index",
+    "dev": "nodemon index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rodrigodesigner94/FinalProject-AfricanCountriesCatalog.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rodrigodesigner94/FinalProject-AfricanCountriesCatalog/issues"
+  },
+  "homepage": "https://github.com/rodrigodesigner94/FinalProject-AfricanCountriesCatalog#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.13"
+  },
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.1"
+  }
+}

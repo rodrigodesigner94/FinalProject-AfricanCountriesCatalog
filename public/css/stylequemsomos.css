@@ -1,0 +1,105 @@
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column ;
+    background-color: rgb(53, 53, 53);
+    background-image: url(../img/piramidesBlack.png);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;    
+}
+
+/* nav */ 
+a {
+    color: #fff;
+    text-decoration: none;
+    transition: 0.3s;
+  }
+  
+  a:hover {
+    opacity: 0.7;
+  }
+  
+  .logo {
+    margin-top: 0;
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
+    background: #161616;
+    height: 8vh;
+    width: 100%;
+    padding-left: 1%;
+    /* padding-right: 1%; */
+    margin-top: 0;
+  }    
+/* nav */
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 30px;
+}
+
+h1{
+    color: rgb(212, 2, 2);
+    font-family: Georgia;
+    font-size: 70px;
+    display: flex;
+    justify-content: flex-start;
+    padding-top: 10%;
+}
+
+section{
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    
+   
+    
+}
+
+article{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* border:white;
+    border-style: solid; */
+    border-radius: 20px;
+    width:300px;
+    height: 300x;
+    margin-left: 3%;
+    margin-right: 3%;
+    align-items: center;
+   
+}
+
+div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: -20px;
+}
+
+p{
+    width: 235px;
+    justify-items: center;
+    color:white;
+    margin-top: -15px;
+    
+}
+h3{
+    color: white;
+}
+img{
+    border-radius: 10px;
+}
