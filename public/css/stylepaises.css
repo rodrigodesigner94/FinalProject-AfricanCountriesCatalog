@@ -1,0 +1,178 @@
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column ;
+    background-color: rgb(53, 53, 53);
+    background-image: url(../img/piramidesBlack.png);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+}
+
+/* nav */
+ 
+  a {
+    color: #fff;
+    text-decoration: none;
+    transition: 0.3s;
+  }
+  
+  a:hover {
+    opacity: 0.7;
+  }
+  
+  .logo {
+    margin-top: 0;
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
+    background: #161616;
+    height: 8vh;
+    width: 100%;
+    padding-left: 1%;
+    /* padding-right: 1%; */
+    margin-top: 0;
+  }
+    
+/* nav */
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+h1{
+    color: rgb(212, 2, 2);
+    font-family: Georgia;
+    font-size: 70px;
+    display: flex;
+    justify-content: center;
+    padding-top: 10%;
+    
+}
+
+div{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+   
+}
+section{
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    
+}
+
+#informacoes{
+    height: 800px;
+    display: flex;    
+    flex-direction: column;
+}
+p{
+    width: 100px;
+    justify-items: right;
+    color:white
+    
+}
+#informacoes1{
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+h4{
+    color: white;
+    
+}
+a.card {
+  width: 10rem;
+  padding: 1rem;
+  box-shadow: 0 0 1rem #df0f0f60;
+  margin: 2rem;
+  border-radius: 1rem;
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.5s;
+  background-color: rgb(36, 23, 23);
+  color: #000;
+  text-decoration: none;
+}
+section#paises{
+  width: 1080px;
+  display:flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+a.card img {
+  width: 8rem;
+  height: 5rem;
+}
+a.card h2 {
+  width: 100%;
+  text-align: center;
+  padding: 0.2rem;
+  color: rgb(212, 2, 2);
+}
+section#detalhes {
+
+  margin: 0 20rem 0 20rem;
+  display:block;
+  justify-content: space-around;
+  align-items: center;
+  width: 600px;
+  background-color: rgb(36, 23, 23);
+  border-radius: 2rem;
+  padding: 3rem;
+  box-shadow: 0 0 1rem #00000060;
+}
+section#detalhes div#infos {
+  background-color: rgb(46, 32, 32);
+  display: block;
+  justify-content: space-around;
+  align-items: center;
+  padding: 3rem;
+
+  width: 70%;
+  border-radius: 1rem;
+}
+section#detalhes div#infos p {
+  font-size: 1rem;
+  padding-left: 2rem;
+  text-align: justify;
+  width: 90%;
+  padding-bottom: 3rem;
+
+}
+
+section#detalhes div#infos  h3 {
+  
+  font-size: 2rem;
+  /* font-weight: 300; */
+  padding: 0.1rem 0 0.1rem 2rem;
+}
+section#detalhes div#infos  h4 {
+  /* display: block; */
+  font-size: 2rem;
+  padding: 0rem 0 0 2rem;
+}
+
+section#detalhes img {
+  width: 20rem;
+  height: 12rem;
+padding-left: 8rem;
+}

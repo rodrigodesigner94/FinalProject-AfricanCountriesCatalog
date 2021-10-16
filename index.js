@@ -19,5 +19,14 @@ app.get("/quemsomos", (req, res) => {
 app.get("/cadastro", (req, res) => {
     res.render("cadastro"); 
 });
+app.get("/sobre", (req, res) => {
+    res.render("sobre"); 
+});
+app.get("/paises", (req, res) => {
+    res.render("paises"); 
+});
+app.get("/detalhes", (req, res) => {
+    res.render("detalhes"); 
+});
 
 app.listen(port, () => console.log(`Servidor rodando em http://localhost:${port}`));
