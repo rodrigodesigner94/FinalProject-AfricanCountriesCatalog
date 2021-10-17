@@ -25,20 +25,12 @@
     <section id="detalhes">
        
         <img src="<%= paises.bandeira %>" alt="">
-        <div id="infos">
-       
-            <p>
-                <%= paises.informacoes %>
-            </p>
+        <div id="infos">       
+            
             <div>
                  <h4>Capital:</h4>
                  <h3><%= paises.capital %> </h3>
-            </div>
-            
-            <div> 
-                <h4>Moeda:</h4>
-                <h3><%= paises.moeda %></h3>
-            </div>  
+            </div>            
             <div>
                 <h4>Extensão:</h4>
                 <h3><%= paises.extensao %></h3>
@@ -46,12 +38,20 @@
             <div>
                 <h4>População:</h4>
                 <h3><%= paises.populacao %></h3>
-             </div>     
-             <div>
+            </div>     
+            <div>
                 <h4>Lingua Oficial:</h4>
                 <h3><%= paises.lingua_oficial %></h3>
-           </div>  
-               
+           </div>
+           <div> 
+                <h4>Moeda:</h4>
+                 <h3><%= paises.moeda %></h3>
+            </div>
+            <div>
+                <p>
+                    <%= paises.informacoes %>
+                </p>  
+           </div>
         </div>
   
 

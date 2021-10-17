@@ -21,15 +21,16 @@
     <section id="inscrever">
         <form action="/editar/<%= filme.id %>" method="POST">
             <section id="pais">
-                <div>
-                        <label for="bandeira">Coloque o link para a imagem da bandeira: </label>
-                        <input type="text" name="bandeira" id="bandeira" placeholder="Link da imagem" value="<%= filme.bandeira %>">
-                    </div>
-                
+                    
                     <div>
                         <label for="nome">Digite o nome do país: </label>
                         <input type="text" name="nome" id="nome" placeholder="Nome do pais" value="<%= pais.nome %>">
                     </div>
+                    <div>
+                        <label for="bandeira">Coloque o link para a imagem da bandeira: </label>
+                        <input type="text" name="bandeira" id="bandeira" placeholder="Link da imagem" value="<%= filme.bandeira %>">
+                    </div>               
+                    
                     <div>
                         <label for="capital">Digite a capital do país: </label>                
                         <input type="text" name="capital" id="capital" placeholder="Digite a capital" value="<%= pais.capital %>">
@@ -48,7 +49,7 @@
                     </div>
                     <div>
                         <label for="lingua">Informe a lingua oficial do país: </label>                
-                        <input type="text" name="lingua" id="lingua" placeholder="Digite a lingua oficial" value="<%= pais.lingua %>">
+                        <input type="text" name="lingua" id="lingua" placeholder="Digite a lingua oficial" value="<%= pais.lingua_oficial %>">
                     </div>
                     <div>
                         <label for="moeda">Informe a moeda oficial do país: </label>                
