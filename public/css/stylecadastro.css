@@ -72,7 +72,7 @@ form{
   justify-content: flex-start;
   background-color: whitesmoke;
   border-radius: 15px;
-  height: 350px;
+  height: 450px;
   width: 600px;
   padding: 10%;
  
@@ -92,4 +92,10 @@ button{
   display: flex;
   justify-content: center;
   align-items: center;
+}
+#bandeira{
+  width:400px;
+}
+#informacoes{
+  width: 250px;
 }
