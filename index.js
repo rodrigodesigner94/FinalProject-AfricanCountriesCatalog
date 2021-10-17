@@ -63,6 +63,9 @@ app.get("/cadastro", (req, res) => {
   res.render("cadastro",{pais})
 });
   
+app.get("/editar", (req, res) => {
+  res.render("editar"); 
+});
 //updeate
 app.get("/editar/:id", async (req, res) => {
     const pais = await Pais.findByPk(req.params.id);
@@ -82,7 +85,7 @@ app.get("/editar/:id", async (req, res) => {
 app.post("/editar/:id", async (req, res) => {
     const pais = await Pais.findByPk(req.params.id);
   
-    const { bandeira, nome, capital, regiao, extensao, populacao, lingua_Oficial, moeda, informacoes } = req.body;
+    const { bandeira, nome, capital, regiao, extensao, populacao, lingua_oficial, moeda, informacoes } = req.body;
   
     pais.bandeira = bandeira;
     pais.nome = nome;
@@ -90,7 +93,7 @@ app.post("/editar/:id", async (req, res) => {
     pais.regiao = regiao;
     pais.extensao = extensao;
     pais.populacao = populacao;
-    pais.lingua_Oficial= lingua;
+    pais.lingua_Oficial= lingua_oficial;
     pais.moeda = moeda;
     pais.informacoes = informacoes;
   
@@ -102,6 +105,9 @@ app.post("/editar/:id", async (req, res) => {
     });
   });
 
+  app.get("/deletar", (req, res) => {
+    res.render("deletar"); 
+  });
   //delete
   app.get("/deletar/:id", async (req, res) => {
     const pais = await Paises.findByPk(req.params.id);
