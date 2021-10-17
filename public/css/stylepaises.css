@@ -130,28 +130,37 @@ a.card h2 {
 }
 section#detalhes {
 
-  margin: 0 20rem 0 20rem;
+  margin: 0 15rem 0 15rem;
   display:block;
   justify-content: space-around;
   align-items: center;
   width: 600px;
   background-color: rgb(36, 23, 23);
   border-radius: 2rem;
-  padding: 3rem;
-  box-shadow: 0 0 1rem #00000060;
+  padding: 2rem;
+  box-shadow: 0 0 1rem #9c0a0a60;
 }
 section#detalhes div#infos {
+  margin-top: 2rem;
+  margin-left: 2rem;
   background-color: rgb(46, 32, 32);
   display: block;
   justify-content: space-around;
-  align-items: center;
+  
   padding: 3rem;
 
   width: 70%;
   border-radius: 1rem;
 }
+section#detalhes div#infos div{
+ padding-top: 0px;
+  
+  /* padding: 0.1rem; */
+
+}
 section#detalhes div#infos p {
   font-size: 1rem;
+  color: rgb(218, 181, 181);
   padding-left: 2rem;
   text-align: justify;
   width: 90%;
@@ -162,13 +171,14 @@ section#detalhes div#infos p {
 section#detalhes div#infos  h3 {
   
   font-size: 2rem;
-  /* font-weight: 300; */
   padding: 0.1rem 0 0.1rem 2rem;
 }
 section#detalhes div#infos  h4 {
-  /* display: block; */
-  font-size: 2rem;
-  padding: 0rem 0 0 2rem;
+ 
+  font-size: 1.7rem;
+  padding-left: 1rem;
+  color: rgb(218, 181, 181);
+  
 }
 
 section#detalhes img {

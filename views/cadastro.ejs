@@ -9,7 +9,7 @@
 </head>
 <body>
     <nav>
-        <a class="logo" href="/home">Home</a>
+        <a class="logo" href="/">Home</a>
         <a class="logo" href="/somos">Quem Somos</a>
         <a class="logo" href="/sobre">Sobre</a>
         <a class="logo" href="/cadastro">Cadastrar</a>
@@ -27,15 +27,16 @@
 
     <section id="cadastro">
         <h2>Cadastre mais um país</h2>        
-        <form action="">                       
-            <!-- <div>                
-                <label for="bandeira">Bandeira: </label>                
-                <input type="text" name="bandeira" id="nome" placeholder="Digite o nome do país" required>            
-            </div> -->
+        <form action="/cadastro" method="POST">                       
             <div>                
                 <label for="nome">Nome: </label>                
                 <input type="text" name="nome" id="nome" placeholder="Digite o nome do país" required>            
-            </div>            
+            </div> 
+            <div>                
+                <label for="bandeira">Bandeira: </label>                
+                <input type="text" name="bandeira" id="bandeira" placeholder="Digite o nome do país" required>            
+            </div>
+                      
             <div>                
                 <label for="capital">Capital: </label>                
                 <input type="text" name="capital" id="capital" placeholder="Digite a capital" required>            
@@ -46,14 +47,14 @@
             </div>
             <div>                
                 <label for="extensao">Extensão: </label>                
-                <input type="number" name="extensao" id="extensao" placeholder="Informe a extensão" required>            
+                <input type="text" name="extensao" id="extensao" placeholder="Informe a extensão" required>            
             </div>
             <div>                
                 <label for="populacao">População: </label>                
-                <input type="number" name="populacao" id="populacao" placeholder="Informe a população" required>            
+                <input type="text" name="populacao" id="populacao" placeholder="Informe a população" required>            
             </div>
-            <label for="lingua">Lingua Oficial: </label>                
-                <input type="lingua" name="lingua" id="lingua" placeholder="Informe a lingua" required>            
+            <label for="lingua_oficial">Lingua Oficial: </label>                
+                <input type="text" name="lingua_oficial" id="lingua_oficial" placeholder="Informe a lingua" required>            
             </div>
             <div> 
             <label for="moeda">Moeda Oficial: </label>                

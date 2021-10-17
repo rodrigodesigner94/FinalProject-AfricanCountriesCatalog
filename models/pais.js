@@ -1,7 +1,7 @@
 const database = require("../database");
 const Sequelize = require("sequelize");
 
-const Filme = database.define("filmes", {
+const Pais = database.define("paises", {
   id: {
     type: Sequelize.INTEGER,
     autoIncrement: true,
@@ -9,6 +9,10 @@ const Filme = database.define("filmes", {
     primaryKey: true,
   },
   nome: {
+    type: Sequelize.STRING,
+    allowNull: false,
+  },
+  bandeira: {
     type: Sequelize.STRING,
     allowNull: false,
   },
@@ -20,18 +24,22 @@ const Filme = database.define("filmes", {
     allowNull: false,
   },
   extensao: {
-    type: Sequelize.INTEGER,
+    type: Sequelize.STRING,
     allowNull: false,
   },
   populacao: {
-    type: Sequelize.INTEGER,
+    type: Sequelize.STRING,
     allowNull: false,
   },
-  lingua: {
+  lingua_oficial: {
     type: Sequelize.STRING,
     allowNull: false,
   },
   moeda: {
+    type: Sequelize.STRING,
+    allowNull: false,
+  },
+  informacoes: {
     type: Sequelize.STRING,
     allowNull: false,
   },
@@ -43,4 +51,4 @@ const Filme = database.define("filmes", {
   updatedAt: false,
 });
 
-module.exports = Africa;
+module.exports = Pais;

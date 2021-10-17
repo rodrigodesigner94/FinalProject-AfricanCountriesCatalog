@@ -2,8 +2,10 @@ require('dotenv').config()
 const express = require("express");
 const path = require("path");
 const app = express();
-const port = 3000;
-const Paises = require("./models/Africa")
+const Pais = require("./models/pais");
+// const port = 3000;
+const port = process.env.PORT || 3000; 
+app.use(express.json());
 
 let message = "";
 
@@ -11,7 +13,7 @@ app.set("view engine", "ejs");
 app.use(express.static(path.join(__dirname, "public")));
 
 
-app.get("/home", (req, res) => {
+app.get("/", (req, res) => {
     res.render("home"); 
 });
 
@@ -19,32 +21,21 @@ app.get("/quemsomos", (req, res) => {
     res.render("quemsomos"); 
 });
 
-app.get("/cadastro", (req, res) => {
-    res.render("cadastro"); 
-});
+
 app.get("/sobre", (req, res) => {
     res.render("sobre"); 
 });
-app.get("/paises", (req, res) => {
-    res.render("paises"); 
-});
-app.get("/detalhes", (req, res) => {
-    res.render("detalhes"); 
-});
-
-//read
-
 app.get("/paises", async (req, res) => {
-    const paises = await Paises.findAll();
+    const paises = await Pais.findAll();
     res.render("paises", {
         paises, message
       });
 });
 
 app.get("/detalhes/:id", async (req, res) => {
-    const pais = await Paises.findByPk(req.params.id);
+    const paises = await Pais.findByPk(req.params.id);
     res.render("detalhes", {
-        pais,
+        paises,
       });
 });
 
@@ -56,80 +47,29 @@ app.get("/cadastro", (req, res) => {
     });
   app.post("/cadastro", async (req, res) => {
 
-    const { bandeira, nome, capital, regiao, extensao, populacao, lingua, moeda} = req.body;
-  
-    if (!bandeira) {
-      res.render("cadastro", {
-        message: "Bandeira é obrigatório",
-      });
-    }
-    else if (!nome) {
-      res.render("cadastro", {
-        message: "Nome é obrigatório",
-      });
-    }
-    else if (!capital) {
-        res.render("cadastro", {
-          message: "Capital é obrigatório",
-        });
-    }
-    else if (!regiao) {
-        res.render("cadastro", {
-          message: "Região é obrigatório",
-        });
-    }
-    else if (!extensao) {
-        res.render("cadastro", {
-          message: "Região é obrigatório",
-        });
-    }
-    else if (!populacao) {
-        res.render("cadastro", {
-          message: "População é obrigatório",
-        });
-    }
-    else if (!lingua) {
-        res.render("cadastro", {
-          message: "Lingua é obrigatório",
-        });
-    }
-    else if (!moeda) {
-        res.render("cadastro", {
-          message: "População é obrigatório",
-        });
-    }       
-    else {
-      try {
-          const pais = await Paises.create({
-                bandeira,
-                nome,
-                capital,
-                regiao,
-                extensao,
-                populacao,
-                lingua,
-                moeda,        
-            });
-  
-            res.redirect("/cadastro");
-        } 
-        catch (err) {
-            console.log(err);
-            
-            res.render("criar", {
-            message: "Ocorreu um erro ao cadastrar o Filme!",
-            });
-        }
-    }
+    const { nome,bandeira, capital, regiao, extensao, populacao, lingua_oficial, moeda, informacoes} = req.body;
+  const pais = await Pais.create({
+    nome,
+    bandeira,
+    capital,
+    regiao,
+    extensao,
+    populacao,
+    lingua_oficial,
+    moeda,
+    informacoes
+
+  })
+  res.render("cadastro",{pais})
 });
   
 //updeate
 app.get("/editar/:id", async (req, res) => {
-    const pais = await Paises.findByPk(req.params.id);
+    const pais = await Pais.findByPk(req.params.id);
   
     if (!pais) {
       res.render("editar", {
-        filme,
+        pais,
         message: "País não encontrado!",
       });
     }
@@ -140,9 +80,9 @@ app.get("/editar/:id", async (req, res) => {
 });
 
 app.post("/editar/:id", async (req, res) => {
-    const pais = await Paises.findByPk(req.params.id);
+    const pais = await Pais.findByPk(req.params.id);
   
-    const { bandeira, nome, capital, regiao, extensao, populacao, lingua, moeda, informacoes } = req.body;
+    const { bandeira, nome, capital, regiao, extensao, populacao, lingua_Oficial, moeda, informacoes } = req.body;
   
     pais.bandeira = bandeira;
     pais.nome = nome;
@@ -150,7 +90,7 @@ app.post("/editar/:id", async (req, res) => {
     pais.regiao = regiao;
     pais.extensao = extensao;
     pais.populacao = populacao;
-    pais.lingua= lingua;
+    pais.lingua_Oficial= lingua;
     pais.moeda = moeda;
     pais.informacoes = informacoes;
   

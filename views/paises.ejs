@@ -6,13 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/stylepaises.css">
 
-    <title>Países</title>
+    <title>Países africanos</title>
 </head>
 
 <body>
     
     <nav>
-        <a class="logo" href="/home">Home</a>
+        <a class="logo" href="/">Home</a>
         <a class="logo" href="/quemsomos">Quem Somos</a>
         <a class="logo" href="/sobre">Sobre</a>
         <a class="logo" href="/cadastro">Cadastrar</a>
@@ -23,28 +23,16 @@
     </header>
     <!-- lista de paises -->
     <section id="paises">
-        <% filmes.forEach(item => { %>
-            <section class="card">
-                <article id="content">
-                    <ul>
-                        <a href="/detalhes/<%= item.id %>">
-                            <img src="<%= item.bandeira %>" width=200>
-                        </a>
-                        <li>Nome: <%= item.nome %></li>
-                        <li>Capital: <%= item.capital %></li>
-                        <li>Região: <%= item.regiao %></li>
-                        <li>Extensão: <%= item.extensao %></li>
-                        <li>População: <%= item.populacao %></li>
-                        <li>Lingua Oficial: <%= item.lingua %></li>
-                        <li>Moeda Oficial: <%= item.moeda %></li>
-                        <li>Informações: <%= item.informacoes %></li>
-                                                
-                    </ul>
-                        <a href = "/editar/<%= item.id %>">Editar</a>
-                        <a href = "/deletar/<%= item.id %>">Deletar</a>
+        <% paises.forEach(item => { %>
 
-                </article>
-            </section>
+            <a class="card" href="/detalhes/<%= item.id %>">
+                <img src="<%= item.bandeira %>" alt="">
+                <h2>
+                    <%= item.nome %>
+                </h2>
+         
+            </a>
+                
         <% }) %> 
     </section>
     <script src="/js/script.js"></script>  

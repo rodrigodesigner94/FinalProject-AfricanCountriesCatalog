@@ -6,36 +6,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/stylepaises.css">
 
-    <title>África Desmistificada</title>
+    <title>Detalhes</title>
 </head>
 
 <body>
     
     <nav>
-        <a class="logo" href="/home">Home</a>
+        <a class="logo" href="/">Home</a>
         <a class="logo" href="/quemsomos">Quem Somos</a>
         <a class="logo" href="/sobre">Sobre</a>
         <a class="logo" href="/cadastro">Cadastrar</a>
     </nav>
 
     <header>
-        <h1>Paises Africanos</h1>
+        <h1><%= paises.nome %></h1>
     </header>
     
-    <section id="pais">
-        <h3>Lista de filmes:</h3>
-            <section class="card">
-                <article id="content">
-                        <ul>
-                            <li>Nome: <%= filme.nome %></li>
-                            <li>Descrição: <%= filme.descricao %></li>
-                            <a href="/">
-                                <img src="<%= filme.imagem %>" width=200>
-                            </a>
-                            <a href="/deletar/<%= filme.id %>">DELETAR!</a>
-                        </ul>
-                </article>
-            </section>
+    <section id="detalhes">
+       
+        <img src="<%= paises.bandeira %>" alt="">
+        <div id="infos">
+       
+            <p>
+                <%= paises.informacoes %>
+            </p>
+            <div>
+                 <h4>Capital:</h4>
+                 <h3><%= paises.capital %> </h3>
+            </div>
+            
+            <div> 
+                <h4>Moeda:</h4>
+                <h3><%= paises.moeda %></h3>
+            </div>  
+            <div>
+                <h4>Extensão:</h4>
+                <h3><%= paises.extensao %></h3>
+            </div>    
+            <div>
+                <h4>População:</h4>
+                <h3><%= paises.populacao %></h3>
+             </div>     
+             <div>
+                <h4>Lingua Oficial:</h4>
+                <h3><%= paises.lingua_oficial %></h3>
+           </div>  
+               
+        </div>
+  
+
     </section>
 
     <script src="/js/script.js"></script>
