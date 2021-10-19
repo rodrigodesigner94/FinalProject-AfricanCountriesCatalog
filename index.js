@@ -3,7 +3,6 @@ const express = require("express");
 const path = require("path");
 const app = express();
 const Pais = require("./models/pais");
-// const port = 3000;
 const port = process.env.PORT || 3000; 
 app.use(express.urlencoded());
 
@@ -60,12 +59,9 @@ app.get("/cadastro", (req, res) => {
     informacoes
 
   })
-  res.render("cadastro",{pais})
+  res.render("cadastro",{pais,message:"País cadastrado com Sucesso!"})
 });
-  
-app.get("/editar", (req, res) => {
-  res.render("editar"); 
-});
+
 //updeate
 app.get("/editar/:id", async (req, res) => {
     const pais = await Pais.findByPk(req.params.id);
@@ -110,7 +106,7 @@ app.post("/editar/:id", async (req, res) => {
   });
   //delete
   app.get("/deletar/:id", async (req, res) => {
-    const pais = await Paises.findByPk(req.params.id);
+    const pais = await Pais.findByPk(req.params.id);
   
     if (!pais) {
       res.render("deletar", {
@@ -126,7 +122,7 @@ app.post("/editar/:id", async (req, res) => {
   
   
   app.post("/deletar/:id", async (req, res) => {
-    const pais = await Paises.findByPk(req.params.id);
+    const pais = await Pais.findByPk(req.params.id);
   
     if (!pais) {
       res.render("deletar", {
